@@ -1,10 +1,10 @@
-import java.util.scanner;
+import java.util.Scanner;
 class larger number
 {
-   public static void main(string[] args)
+   public static void main(String[] args)
    {
        int a,b,c,larger,temp;
-       scanner sc= new scanner(System.in);
+       Scanner sc= new Scanner(System.in);
        System.out.println("enter the first number");
        a= sc.nextInt();
        System.out.println("enter the second number");
