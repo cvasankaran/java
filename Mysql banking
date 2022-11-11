@@ -1,0 +1,15 @@
+#SQL
+show databases;
+create database banking2;
+use banking2;
+create table branches2
+(branchcode int primary key,
+  location varchar(200) not null) ;
+Insert into branches2 values(2,'chenni'),(3,'hyderabad'),(4,'bangalore');
+select * from branches2;
+create table bankmaster(acno int primary key,custname varchar(20) not null,city varchar(40) default 'hyd',balance int,branchcode int,check(balance>=500),foreign key(branchcode) references branches2(branchcode));
+insert into bankmaster values(102,'ghy',default,2000,2) ;
+select* from bankmaster;
+create table banktransaction1 (acno int ,ttype char(1),tdate date not null, amount int not null,  foreign key (acno) references bankmaster(acno));
+insert into  banktransaction1 values(102,'w','2018-11-02',20000);
+select* from banktransaction1;
