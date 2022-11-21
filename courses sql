@@ -1,0 +1,5 @@
+create database courses1;
+use courses1;
+create table students(sname varchar(30), cname varchar(20), fees int);
+insert into students values('sai','java',10000),('manoj','oracle',5000),('siva','python',12000),('mohan','java',10000),('dona','java',10000),('stella','python',12000);
+select * from students;
